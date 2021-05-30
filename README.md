@@ -4,6 +4,9 @@ The Black-Box Discrete Optimization Benchmarks
 ## Setup
 BB-DOB requires:
 - Python >= 3.6
+- [Nasbench](https://github.com/google-research/nasbench)
+
+  Caution: If you use tensorflow v2, you have to replace 'tf.train' with 'tf.replace' in source codes of Nasbench repository ([reference](https://github.com/google-research/nasbench/issues/27)).
 
 Install `BB-DOB` from the sources:
 
@@ -36,6 +39,10 @@ The search space is *D*-dimensional bit-strings **c** &in; {0,1}<sup>D</sup>.
   - where *k* = 3 and *d* is a user parameter
 - [NK-landscape](http://ncra.ucd.ie/wp-content/uploads/2020/08/SocialLearning_GECCO2019.pdf)
 - [W-Model](http://iao.hfuu.edu.cn/images/publications/W2018TWMATBBDOBPIFTBGW.pdf)
+
+The search space is *D*-dimensional strings of a finite cardinality **c** &in; R<sup>D</sup>.
+- [NAS-Bench-101](https://arxiv.org/abs/1902.09635)
+  - The search space is {0,1}<sup>21</sup>&times;{0,1,2}<sup>5</sup>.
 
 ## Usage
 The example is shown below.  
